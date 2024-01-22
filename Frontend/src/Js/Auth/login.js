@@ -44,7 +44,7 @@ const LoginComponent = () => {
           localStorage.setItem('isAuthenticated', true);
           localStorage.setItem('isAdmin', response.data.admin);
           localStorage.removeItem('loggedOut')
-          toastFunctions.showSuccessToast('You are Sucessfully Logged in',1500)
+          // toastFunctions.showSuccessToast('You are Sucessfully Logged in',1500)
           setTimeout(() => {
             setLoading(true)
             window.document.location = window.origin + "/home"
