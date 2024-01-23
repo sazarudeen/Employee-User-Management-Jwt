@@ -6,11 +6,13 @@ import $ from 'jquery'
 import ApiConstants from '../Constants/Endpoints';
 import { ToastContainer } from 'react-toastify';
 import { toastFunctions } from '../Status/StatusBar';
-const LoginComponent = () => {
+const LoginComponent = ({setMiddle}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [warningBanner, setWarningBanner] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  setMiddle('Employee User')
 
   const location = useLocation();
 
