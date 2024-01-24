@@ -25,7 +25,7 @@ function App() {
   };
 
   const adminProtectedRoutes = (component) => {
-    return isAuthenticated && isAdmin ? component : <Navigate to="/login" />;
+    return  JSON.parse(isAdmin) && isAuthenticated ? component : <Navigate to="/login" />;
   };
 
   return (
