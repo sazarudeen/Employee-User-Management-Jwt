@@ -41,7 +41,7 @@ Check the configuration in the `application.properties` file and modify it accor
 ```properties
 spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=EmployeeManagementDB;encrypt=true;trustServerCertificate=true;
 spring.datasource.username=sa
-spring.datasource.password=exterro-123456
+spring.datasource.password=*******
 spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
 logging.file.name=D:/SpringLogs/EmployeeManagement.log
 redis.host=localhost
