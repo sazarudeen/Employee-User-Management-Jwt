@@ -28,30 +28,54 @@ To address potential discrepancies in data between Redis and the database, a man
 
 ### Step 1
 
-Clone and import this Spring Boot project.
+Clone and import this Spring Boot project and update the maven dependencies.
 
 ### Step 2
 
-Ensure Java 17 is installed before running this Spring Boot application.
+Things to be verified Before starting the server :
 
-### Step 3
-
-Check the configuration in the `application.properties` file and modify it according to your setup.
+* **Java 17** must be installed.
+* **Redis Server** must be installed and ensure it is running in localhost on default port **6379**
+* **MS SQL Server** must be installed.If installed,make sure to create Database name **EmployeeManagementDB**
+* Do not change the server port from **9091** ,Leave it as it is since front end application communicating with server on this port,If you want to change as per your need.Ensure to change the port information in frontend as well for proper communication.
 
 ```properties
+server.port = 9091
 spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=EmployeeManagementDB;encrypt=true;trustServerCertificate=true;
 spring.datasource.username=sa
 spring.datasource.password=*******
 spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
-logging.file.name=D:/SpringLogs/EmployeeManagement.log
 redis.host=localhost
 redis.port=6379
 ```
+* For logging setup,make sure to create a folder named "SpringLogs" inside **D drive** as belows.
+
+```properties
+logging.file.name=D:/SpringLogs/EmployeeManagement.log
+```
+
+**Note :**
+ - If you are not satisfied with this configuration,feel free to modify the configurations in application.properties file according to your set up.
+
+
+ ### Step 3 
+
+ Once the set up is completed,There you go...
+
+ You can start the application from any IDE you are working on.
+
+ If not having any IDE,You can start the application right from your command prompt.But ensure the fat jar is built before that.
+ 
 Build and Run
 If Java 17 and Maven are installed, build the fat jar using the following command:
 
 ```bash
 mvn clean install -Dmaven.test.skip=true
+```
+Please verify if the jar is built in target location of project.Once it is built,Then You can start the server using this command from project directory in command prompt.
+
+```bash
+java -jar {jarname}.jar
 ```
 
 ## Frontend Setup
@@ -62,7 +86,7 @@ Fork the frontend part from the GitHub repository.
 
 ### Step 2
 
-Install the dependencies by executing:
+Install the dependencies by executing the below command :
 
 ```bash
 npm install
@@ -70,7 +94,7 @@ npm install
 
 ### Step 3
 
-Start the frontend application with : 
+Start the frontend application by executing the below command :
 
 ```bash
 npm start
