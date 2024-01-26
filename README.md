@@ -36,12 +36,12 @@ Things to be verified Before starting the server :
 
 * **Java 17** must be installed.
 * **Redis Server** must be installed and ensure it is running in localhost on default port **6379**
-* **MS SQL Server** must be installed.If installed,make sure to create Database name **EmployeeManagementDB**
-* Do not change the server port from **9091** ,Leave it as it is since front end application communicating with server on this port,If you want to change as per your need.Ensure to change the port information in frontend as well for proper communication.
+* **MS SQL Server** must be installed.If installed,make sure to create Database named **EmployeeManagementDB**
+* Do not change the server port from **9091** .Leave it as it is since front end application communicating with server on this port only,If you want to change as per your need.Ensure to change the port information in frontend as well for proper communication.
 
 ```properties
 server.port = 9091
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=EmployeeManagementDB;encrypt=true;trustServerCertificate=true;
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=EmployeeManagementDB;encrypt=true;trustServerCertificate=true
 spring.datasource.username=sa
 spring.datasource.password=*******
 spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
