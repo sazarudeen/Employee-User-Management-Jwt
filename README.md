@@ -41,7 +41,7 @@ Things to be verified Before starting the server :
 
 ```properties
 server.port = 9091
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=EmployeeManagementDB;encrypt=true;trustServerCertificate=true
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=EmployeeManagementDB;encrypt=true;trustServerCertificate=true;
 spring.datasource.username=sa
 spring.datasource.password=*******
 spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
